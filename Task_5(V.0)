@@ -1,0 +1,33 @@
+class Human:
+    def __init__(self, name, surname, age):
+        self.name = name
+        self.surname = surname
+        self.age = age
+
+    def get_human_info(self, name, surname, age):
+        return name, surname, age
+
+
+class Work:
+    def __init__(self, job_title, salary):
+        self.job_title = job_title
+        self.salary = salary
+
+    def print_work_info(self, job_title, salary):
+        return job_title, salary
+
+
+class Information:
+    def __init__(self, human: Human, work: Work):
+        self.human = human
+        self.work = work
+
+    def print_info(self):
+        return self.human.name, self.human.surname, self.human.age, self.work.job_title, self.work.salary
+
+
+primer_h = Human("Egor", "Sin", "17")
+primer_w = Work("student", "a cup of rise")
+
+info = Information(primer_h, primer_w)
+print(info.print_info())
